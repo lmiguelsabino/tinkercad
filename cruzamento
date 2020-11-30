@@ -1,0 +1,54 @@
+/*
+Cruzamento de ruas 
+Elaborado por: Luiz Miguel 
+Data: 03/09/2020
+Descrição: Simula o funcionamento de um cruzamento com 2 semaforos de 3 fases 
+*****PINAGEM*****
+Semaforo 1:			Semaforo 2:
+13: vermelho		7: vermelho 
+12: amarelo			6: amarelo 
+11: verde 			5: verde 
+
+
+
+
+
+
+
+
+*/ 
+void setup()//inicia o arduino e é exucutado uma vez 
+{
+  pinMode(13, OUTPUT); //define o pino 13 como saida 
+  pinMode(7, OUTPUT);	//define o pino 7 como saida 
+  pinMode(11, OUTPUT);	//define o pino 11 como saida 
+  pinMode(12, OUTPUT);	//define o pino 12 como saida 
+  pinMode(5, OUTPUT);	//define o pino 2 como saida 
+  pinMode(6, OUTPUT);	//define o pino 6 como saida 
+}
+
+void loop()	//executa os comandos abaixo de maneira ciclica
+{
+  digitalWrite(13, HIGH); 	//aciona o pino 13 como alto
+  digitalWrite(7, HIGH);	//aciona pino 7 como alto 
+  delay(1000); // aguarde 1 segundo 
+  digitalWrite(13, LOW);	//aciona pino 13 como baixo 	 
+  digitalWrite(7, HIGH);	//aciona pino 7 
+  digitalWrite(11, HIGH);	//aciona pino 11 como alto 
+  delay(3000); // aguarde 3 segundos 
+  digitalWrite(11, LOW);	//aciona pino 11 como baixo
+  digitalWrite(12, HIGH);	//aciona pino 12 como alto 
+  digitalWrite(7, HIGH);	//aciona pino 7 como alto 
+  delay(2000); // aguarde 2 segundos 
+  digitalWrite(12, LOW);	//aciona pino 12 como baixo 
+  digitalWrite(13, HIGH);	//aciona pino 13 como alto
+  delay(2000); //aguarde 2 segundos 
+  digitalWrite(7, LOW);		//aciona pino 7 como baixo 
+  digitalWrite(13, HIGH);	//aciona pino 13 como alto 
+  digitalWrite(5, HIGH);	//aciona pino 5 como alto 
+  delay(3000); //aguarde 3 segundos 
+  digitalWrite(5, LOW);		//aciona pino 5 como baixo 
+  digitalWrite(6, HIGH);	//aciona pino 6 como alto 
+  delay(2000); //aguarde 2 segundos 
+  digitalWrite(6, LOW);		//aciona pino 6 como baixo 
+}
